@@ -326,16 +326,39 @@
                         </div>
                     </div>
                 </div>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                        <li data-target="#myCarousel" data-slide-to="4"></li>
-                        <li data-target="#myCarousel" data-slide-to="5"></li>
-                        <li data-target="#myCarousel" data-slide-to="6"></li>
-                    </ol>
+                <style>
+                 
+                    .carousel-radio {
+                        display: none;
+                    }
+                    .carousel-inner .item {
+                        display: none;
+                    }
+                
+                   
+                    #carousel-radio-1:checked ~ .carousel-inner .item:nth-child(1),
+                    #carousel-radio-2:checked ~ .carousel-inner .item:nth-child(2),
+                    #carousel-radio-3:checked ~ .carousel-inner .item:nth-child(3),
+                    #carousel-radio-4:checked ~ .carousel-inner .item:nth-child(4),
+                    #carousel-radio-5:checked ~ .carousel-inner .item:nth-child(5),
+                    #carousel-radio-6:checked ~ .carousel-inner .item:nth-child(6),
+                    #carousel-radio-7:checked ~ .carousel-inner .item:nth-child(7) {
+                        display: block;
+                    }
+                </style>
+                
+                <div id="myCarousel" class="carousel slide">
+                    
+                    <input type="radio" class="carousel-radio" id="carousel-radio-1" name="carousel" checked>
+                    <input type="radio" class="carousel-radio" id="carousel-radio-2" name="carousel">
+                    <input type="radio" class="carousel-radio" id="carousel-radio-3" name="carousel">
+                    <input type="radio" class="carousel-radio" id="carousel-radio-4" name="carousel">
+                    <input type="radio" class="carousel-radio" id="carousel-radio-5" name="carousel">
+                    <input type="radio" class="carousel-radio" id="carousel-radio-6" name="carousel">
+                    <input type="radio" class="carousel-radio" id="carousel-radio-7" name="carousel">
+                
+                   
+               
                     <div class="carousel-inner">
                         <div class="item active">
                             <img class="center-block gallery-img" src="./images/poster.jpg" alt="The Monkees">
@@ -408,23 +431,7 @@
                             <hr class="block-divider block-divider--black">
                             <br>
                         </div>
-                        <ul class="social-list list-inline">
-                            <li>
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
-                            </li>
-
-                        </ul>
-                        <br>
-                        <form class="contact-form" id="signup" method="get">
-                            <input class="email-box" name="email" placeholder="Enter email to get updates" required type="email">
-                            <input class="btn--cta " id="submit-button" type="submit" value="Subscribe">
-                        </form>
+                        
                         <br>
                         <br>
                         <p class="text-muted text-center">Created By Abstract. </p>
